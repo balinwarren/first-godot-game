@@ -235,10 +235,10 @@ layer_1/tile_data = PackedInt32Array(131072, 0, 0, 131073, 0, 0, 327678, 0, 0, 3
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Score Label" type="Label" parent="CanvasLayer"]
-offset_left = 964.0
-offset_top = 11.0
-offset_right = 1138.0
-offset_bottom = 35.0
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 183.0
+offset_bottom = 31.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_q66oe")
 theme_override_font_sizes/font_size = 24
