@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://0u7r5x8lvkoa"]
+[gd_scene load_steps=10 format=3 uid="uid://0u7r5x8lvkoa"]
 
 [ext_resource type="Script" path="res://scripts/slime.gd" id="1_hefb1"]
 [ext_resource type="Texture2D" uid="uid://csh67gaho4vm0" path="res://assets/sprites/slime_green.png" id="1_s285c"]
@@ -43,16 +43,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxdi1"]
 size = Vector2(10, 13)
 
-[sub_resource type="GDScript" id="GDScript_dogrd"]
-script/source = "extends CollisionShape2D
-
-const SPEED = 60
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	position.x += SPEED * delta
-"
-
 [node name="slime" type="Node2D"]
 script = ExtResource("1_hefb1")
 
@@ -69,7 +59,6 @@ position = Vector2(0, -12)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(0, 4.5)
 shape = SubResource("RectangleShape2D_fxdi1")
-script = SubResource("GDScript_dogrd")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
