@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://cisw8nncbihcp"]
+[gd_scene load_steps=14 format=3 uid="uid://cisw8nncbihcp"]
 
 [ext_resource type="Texture2D" uid="uid://bqqpac8eb523o" path="res://assets/sprites/world_tileset.png" id="1_gc0wr"]
 [ext_resource type="PackedScene" uid="uid://bdwlc4uhgej2b" path="res://scenes/player.tscn" id="1_ygmk5"]
 [ext_resource type="PackedScene" uid="uid://bapu0e1x5ha6i" path="res://scenes/platform.tscn" id="3_dpybd"]
 [ext_resource type="PackedScene" uid="uid://cato33v6xb0uq" path="res://scenes/coin.tscn" id="4_my8gy"]
 [ext_resource type="PackedScene" uid="uid://cyuchsm8aem2e" path="res://scenes/killzone.tscn" id="5_ullik"]
+[ext_resource type="FontFile" uid="uid://dodvasrwxi4ar" path="res://assets/fonts/PixelOperator8.ttf" id="6_0y2kp"]
 [ext_resource type="PackedScene" uid="uid://0u7r5x8lvkoa" path="res://scenes/slime.tscn" id="6_flkwb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0e2ii"]
@@ -286,5 +287,49 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="slime" parent="." instance=ExtResource("6_flkwb")]
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -111.0
+offset_top = 44.0
+offset_right = -20.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_0y2kp")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump."
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 369.0
+offset_top = 62.0
+offset_right = 460.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_0y2kp")
+theme_override_font_sizes/font_size = 8
+text = "Falling hurts."
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 485.0
+offset_top = -17.0
+offset_right = 576.0
+offset_bottom = -9.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_0y2kp")
+theme_override_font_sizes/font_size = 8
+text = "Avoid Enemies."
+
+[node name="Label4" type="Label" parent="Labels"]
+offset_left = 738.0
+offset_top = -61.0
+offset_right = 832.0
+offset_bottom = -53.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_0y2kp")
+theme_override_font_sizes/font_size = 8
+text = "Almost there..."
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="slime" parent="Enemies" instance=ExtResource("6_flkwb")]
 position = Vector2(574, 64)
